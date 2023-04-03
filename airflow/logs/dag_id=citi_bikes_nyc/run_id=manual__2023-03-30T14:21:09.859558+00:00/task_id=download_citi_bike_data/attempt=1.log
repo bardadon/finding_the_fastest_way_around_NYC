@@ -1,0 +1,30 @@
+[2023-03-30T14:21:10.549+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: citi_bikes_nyc.download_citi_bike_data manual__2023-03-30T14:21:09.859558+00:00 [queued]>
+[2023-03-30T14:21:10.559+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: citi_bikes_nyc.download_citi_bike_data manual__2023-03-30T14:21:09.859558+00:00 [queued]>
+[2023-03-30T14:21:10.559+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-30T14:21:10.560+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-03-30T14:21:10.560+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-30T14:21:10.575+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): download_citi_bike_data> on 2023-03-30 14:21:09.859558+00:00
+[2023-03-30T14:21:10.582+0000] {standard_task_runner.py:55} INFO - Started process 921 to run task
+[2023-03-30T14:21:10.585+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'citi_bikes_nyc', 'download_citi_bike_data', 'manual__2023-03-30T14:21:09.859558+00:00', '--job-id', '231', '--raw', '--subdir', 'DAGS_FOLDER/citi_bikes_nyc.py', '--cfg-path', '/tmp/tmp8rb2zp6z']
+[2023-03-30T14:21:10.585+0000] {standard_task_runner.py:83} INFO - Job 231: Subtask download_citi_bike_data
+[2023-03-30T14:21:10.633+0000] {task_command.py:389} INFO - Running <TaskInstance: citi_bikes_nyc.download_citi_bike_data manual__2023-03-30T14:21:09.859558+00:00 [running]> on host ea14cce7ead9
+[2023-03-30T14:21:10.684+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=citi_bikes_nyc
+AIRFLOW_CTX_TASK_ID=download_citi_bike_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-30T14:21:09.859558+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-30T14:21:09.859558+00:00
+[2023-03-30T14:21:10.685+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-30T14:21:10.686+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'curl -o /opt/***/dags/data/202201-citibike-tripdata.csv.zip https://s3.amazonaws.com/tripdata/202201-citibike-tripdata.csv.zip']
+[2023-03-30T14:21:10.695+0000] {subprocess.py:86} INFO - Output:
+[2023-03-30T14:21:10.701+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2023-03-30T14:21:10.701+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2023-03-30T14:21:44.839+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 33.9M    0 86671    0     0  70406      0  0:08:25  0:00:01  0:08:24 70406  1 33.9M    1  508k    0     0   241k      0  0:02:23  0:00:02  0:02:21  241k  2 33.9M    2 1019k    0     0   328k      0  0:01:45  0:00:03  0:01:42  328k  3 33.9M    3 1376k    0     0   334k      0  0:01:43  0:00:04  0:01:39  334k  5 33.9M    5 1784k    0     0   348k      0  0:01:39  0:00:05  0:01:34  359k  6 33.9M    6 2123k    0     0   346k      0  0:01:40  0:00:06  0:01:34  416k  6 33.9M    6 2430k    0     0   340k      0  0:01:42  0:00:07  0:01:35  381k  7 33.9M    7 2735k    0     0   336k      0  0:01:43  0:00:08  0:01:35  340k  8 33.9M    8 3025k    0     0   330k      0  0:01:45  0:00:09  0:01:36  327k  9 33.9M    9 3347k    0     0   330k      0  0:01:45  0:00:10  0:01:35  312k 10 33.9M   10 3688k    0     0   331k      0  0:01:44  0:00:11  0:01:33  312k 11 33.9M   11 4044k    0     0   334k      0  0:01:43  0:00:12  0:01:31  325k 13 33.9M   13 4520k    0     0   344k      0  0:01:40  0:00:13  0:01:27  359k 14 33.9M   14 5115k    0     0   362k      0  0:01:35  0:00:14  0:01:21  420k 16 33.9M   16 5813k    0     0   384k      0  0:01:30  0:00:15  0:01:15  492k 18 33.9M   18 6493k    0     0   402k      0  0:01:26  0:00:16  0:01:10  559k 20 33.9M   20 7190k    0     0   418k      0  0:01:22  0:00:17  0:01:05  621k 22 33.9M   22 7887k    0     0   435k      0  0:01:19  0:00:18  0:01:01  673k 24 33.9M   24 8584k    0     0   449k      0  0:01:17  0:00:19  0:00:58  694k 26 33.9M   26 9281k    0     0   461k      0  0:01:15  0:00:20  0:00:55  695k 28 33.9M   28 9943k    0     0   470k      0  0:01:13  0:00:21  0:00:52  693k 30 33.9M   30 10.3M    0     0   477k      0  0:01:12  0:00:22  0:00:50  679k 32 33.9M   32 11.0M    0     0   488k      0  0:01:11  0:00:23  0:00:48  679k 34 33.9M   34 11.8M    0     0   502k      0  0:01:09  0:00:24  0:00:45  702k 37 33.9M   37 12.6M    0     0   516k      0  0:01:07  0:00:25  0:00:42  740k 40 33.9M   40 13.6M    0     0   533k      0  0:01:05  0:00:26  0:00:39  800k 43 33.9M   43 14.6M    0     0   553k      0  0:01:02  0:00:27  0:00:35  892k 47 33.9M   47 16.1M    0     0   587k      0  0:00:59  0:00:28  0:00:31 1049k 53 33.9M   53 18.0M    0     0   634k      0  0:00:54  0:00:29  0:00:25 1282k 60 33.9M   60 20.5M    0     0   699k      0  0:00:49  0:00:30  0:00:19 1614k 69 33.9M   69 23.6M    0     0   777k      0  0:00:44  0:00:31  0:00:13 2055k 79 33.9M   79 26.8M    0     0   857k      0  0:00:40  0:00:32  0:00:08 2503k 89 33.9M   89 30.3M    0     0   940k      0  0:00:36  0:00:33  0:00:03 2923k 99 33.9M   99 33.9M    0     0  1018k      0  0:00:34  0:00:34 --:--:-- 3242k100 33.9M  100 33.9M    0     0  1018k      0  0:00:34  0:00:34 --:--:-- 3406k
+[2023-03-30T14:21:44.842+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-30T14:21:44.866+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=citi_bikes_nyc, task_id=download_citi_bike_data, execution_date=20230330T142109, start_date=20230330T142110, end_date=20230330T142144
+[2023-03-30T14:21:44.906+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-03-30T14:21:44.921+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

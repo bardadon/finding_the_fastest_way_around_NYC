@@ -1,0 +1,23 @@
+[2023-03-30T15:03:05.649+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: citi_bikes_nyc.load_data_to_google_bucket manual__2023-03-30T14:47:32.141263+00:00 [queued]>
+[2023-03-30T15:03:05.660+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: citi_bikes_nyc.load_data_to_google_bucket manual__2023-03-30T14:47:32.141263+00:00 [queued]>
+[2023-03-30T15:03:05.660+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-30T15:03:05.660+0000] {taskinstance.py:1284} INFO - Starting attempt 6 of 7
+[2023-03-30T15:03:05.660+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-30T15:03:05.673+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): load_data_to_google_bucket> on 2023-03-30 14:47:32.141263+00:00
+[2023-03-30T15:03:05.679+0000] {standard_task_runner.py:55} INFO - Started process 5362 to run task
+[2023-03-30T15:03:05.683+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'citi_bikes_nyc', 'load_data_to_google_bucket', 'manual__2023-03-30T14:47:32.141263+00:00', '--job-id', '244', '--raw', '--subdir', 'DAGS_FOLDER/citi_bikes_nyc.py', '--cfg-path', '/tmp/tmpc_y8wv9y']
+[2023-03-30T15:03:05.684+0000] {standard_task_runner.py:83} INFO - Job 244: Subtask load_data_to_google_bucket
+[2023-03-30T15:03:05.736+0000] {task_command.py:389} INFO - Running <TaskInstance: citi_bikes_nyc.load_data_to_google_bucket manual__2023-03-30T14:47:32.141263+00:00 [running]> on host ea14cce7ead9
+[2023-03-30T15:03:05.791+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=citi_bikes_nyc
+AIRFLOW_CTX_TASK_ID=load_data_to_google_bucket
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-30T14:47:32.141263+00:00
+AIRFLOW_CTX_TRY_NUMBER=6
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-30T14:47:32.141263+00:00
+[2023-03-30T15:03:05.792+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-30T15:03:05.798+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=citi_bikes_nyc, task_id=load_data_to_google_bucket, execution_date=20230330T144732, start_date=20230330T150305, end_date=20230330T150305
+[2023-03-30T15:03:05.814+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-03-30T15:03:05.827+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

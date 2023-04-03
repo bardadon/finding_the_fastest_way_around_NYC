@@ -1,0 +1,30 @@
+[2023-04-03T16:33:54.338+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: citi_bikes_nyc.download_citi_bike_data scheduled__2023-04-02T16:33:28.236193+00:00 [queued]>
+[2023-04-03T16:33:54.347+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: citi_bikes_nyc.download_citi_bike_data scheduled__2023-04-02T16:33:28.236193+00:00 [queued]>
+[2023-04-03T16:33:54.347+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-03T16:33:54.347+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-04-03T16:33:54.347+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-03T16:33:54.363+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): download_citi_bike_data> on 2023-04-02 16:33:28.236193+00:00
+[2023-04-03T16:33:54.370+0000] {standard_task_runner.py:55} INFO - Started process 82 to run task
+[2023-04-03T16:33:54.373+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'citi_bikes_nyc', 'download_citi_bike_data', 'scheduled__2023-04-02T16:33:28.236193+00:00', '--job-id', '316', '--raw', '--subdir', 'DAGS_FOLDER/citi_bikes_nyc.py', '--cfg-path', '/tmp/tmpccctwkig']
+[2023-04-03T16:33:54.375+0000] {standard_task_runner.py:83} INFO - Job 316: Subtask download_citi_bike_data
+[2023-04-03T16:33:54.437+0000] {task_command.py:389} INFO - Running <TaskInstance: citi_bikes_nyc.download_citi_bike_data scheduled__2023-04-02T16:33:28.236193+00:00 [running]> on host 3367fdfa05b8
+[2023-04-03T16:33:54.497+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=citi_bikes_nyc
+AIRFLOW_CTX_TASK_ID=download_citi_bike_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-02T16:33:28.236193+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-02T16:33:28.236193+00:00
+[2023-04-03T16:33:54.498+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-04-03T16:33:54.499+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'curl -o /opt/***/dags/data/202201-citibike-tripdata.csv.zip https://s3.amazonaws.com/tripdata/202201-citibike-tripdata.csv.zip']
+[2023-04-03T16:33:54.511+0000] {subprocess.py:86} INFO - Output:
+[2023-04-03T16:33:54.539+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2023-04-03T16:33:54.539+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2023-04-03T16:34:13.290+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 33.9M    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  1 33.9M    1  442k    0     0   262k      0  0:02:12  0:00:01  0:02:11  262k  7 33.9M    7 2568k    0     0   960k      0  0:00:36  0:00:02  0:00:34  960k 14 33.9M   14 5106k    0     0  1384k      0  0:00:25  0:00:03  0:00:22 1383k 22 33.9M   22 7714k    0     0  1647k      0  0:00:21  0:00:04  0:00:17 1647k 29 33.9M   29  9.9M    0     0  1790k      0  0:00:19  0:00:05  0:00:14 2142k 36 33.9M   36 12.2M    0     0  1856k      0  0:00:18  0:00:06  0:00:12 2387k 40 33.9M   40 13.8M    0     0  1844k      0  0:00:18  0:00:07  0:00:11 2316k 46 33.9M   46 15.7M    0     0  1850k      0  0:00:18  0:00:08  0:00:10 2194k 51 33.9M   51 17.4M    0     0  1840k      0  0:00:18  0:00:09  0:00:09 2019k 56 33.9M   56 19.3M    0     0  1854k      0  0:00:18  0:00:10  0:00:08 1926k 61 33.9M   61 21.0M    0     0  1839k      0  0:00:18  0:00:11  0:00:07 1815k 66 33.9M   66 22.6M    0     0  1817k      0  0:00:19  0:00:12  0:00:07 1777k 71 33.9M   71 24.1M    0     0  1806k      0  0:00:19  0:00:13  0:00:06 1730k 76 33.9M   76 26.0M    0     0  1809k      0  0:00:19  0:00:14  0:00:05 1749k 82 33.9M   82 27.8M    0     0  1819k      0  0:00:19  0:00:15  0:00:04 1743k 87 33.9M   87 29.8M    0     0  1829k      0  0:00:18  0:00:16  0:00:02 1808k 93 33.9M   93 31.7M    0     0  1839k      0  0:00:18  0:00:17  0:00:01 1896k 99 33.9M   99 33.7M    0     0  1853k      0  0:00:18  0:00:18 --:--:-- 1980k100 33.9M  100 33.9M    0     0  1853k      0  0:00:18  0:00:18 --:--:-- 2018k
+[2023-04-03T16:34:13.292+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-04-03T16:34:13.312+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=citi_bikes_nyc, task_id=download_citi_bike_data, execution_date=20230402T163328, start_date=20230403T163354, end_date=20230403T163413
+[2023-04-03T16:34:13.366+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-04-03T16:34:13.387+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
