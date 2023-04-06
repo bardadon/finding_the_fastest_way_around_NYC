@@ -24,6 +24,9 @@ fi
 mkdir $(pwd)/airflow
 export AIRFLOW_HOME=$(pwd)/airflow
 
+# Create airflow folders
+mkdir -p ${AIRFLOW_HOME}/dags/data
+
 # Set airflow and python version 
 AIRFLOW_VERSION=2.5.0
 PYTHON_VERSION="$(python3 --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
@@ -38,8 +41,8 @@ pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}
 cd airflow
 
 # fetch the docker-compose.yaml and Dockerfile
-curl -LfO https://raw.githubusercontent.com/bardadon/airflow_finding_the_fastest_way_around_NYC/master/airflow/docker-compose.yaml  
-curl -LfO https://raw.githubusercontent.com/bardadon/airflow_finding_the_fastest_way_around_NYC/master/airflow/Dockerfile
+curl -LfO https://raw.githubusercontent.com/bardadon/finding_the_fastest_way_around_NYC/master/airflow/docker-compose.yaml  
+curl -LfO https://raw.githubusercontent.com/bardadon/finding_the_fastest_way_around_NYC/master/airflow/Dockerfile
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.5.0/airflow.sh'
 chmod +x airflow.sh
 
@@ -53,4 +56,4 @@ echo PYTHONPATH=$(pwd) >> .env
 export PYTHONPATH=$(pwd)
 
 # Start airflow
-docker-compose up -d
+docker-compose build
