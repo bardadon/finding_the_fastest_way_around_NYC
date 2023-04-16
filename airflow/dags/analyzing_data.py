@@ -324,7 +324,7 @@ with DAG(dag_id='analyzing_data', default_args=default_args, catchup=True) as da
     max_rows_to_process = 100000
     chunk_size = 25000
 
-    #check_for_data >> create_view >> [most_popular_stations, most_popular_routes] 
-    find_shortest_path(start_station_name, destination_station, max_rows_to_process, all_stations, chunk_size)
-    #[most_popular_stations, most_popular_routes] >> shortest_distance
+    check_for_data >> create_view >> [most_popular_stations, most_popular_routes] 
+    shortest_distance = find_shortest_path(start_station_name, destination_station, max_rows_to_process, all_stations, chunk_size)
+    [most_popular_stations, most_popular_routes] >> shortest_distance
 
